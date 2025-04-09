@@ -824,19 +824,19 @@ footer {
 
 .project-image {
     position: relative;
-    height: 200px;
+    height: 300px; /* Augmentation de la hauteur */
     overflow: hidden;
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Couvre toute la zone sans déformer l'image */
     transition: transform 0.3s ease;
 }
 
 .project-image-card:hover .project-image img {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Léger zoom au survol */
 }
 
 .project-overlay {
@@ -1339,4 +1339,21 @@ td i.fa-times {
         font-size: 1rem;
         padding: 0 1rem;
     }
+}
+
+/* Styles pour les cartes de projets avec images */
+.index-project-image {
+    height: 200px; /* Taille originale */
+    overflow: hidden;
+}
+
+.index-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.index-project-image:hover img {
+    transform: scale(1.1);
 }
