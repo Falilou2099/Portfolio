@@ -43,20 +43,23 @@
     <!-- Section Présentation -->
     <section class="section">
         <div class="cards-grid">
-            <!-- Carte Profil -->
-            <div class="project-image-card">
-                <div class="project-image">
-                    <img src="img/profil.jpg" alt="Photo de profil">
-                </div>
-                <div class="project-info">
-                    <h3><i class="fas fa-user"></i> Profil</h3>
-                    <p>Étudiant en BTS SIO option SLAM, passionné par le développement web et mobile.</p>
-                    <div class="info-details">
-                        <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
-                        <p><i class="fas fa-graduation-cap"></i> BTS SIO en cours</p>
-                        <p><i class="fas fa-code"></i> Développeur Full Stack Junior</p>
+            <!-- Carte Profil avec CV à droite -->
+            <div class="profile-and-cv-container">
+                <div class="project-image-card profile-card">
+                    <div class="project-image">
+                        <img src="img/profil.jpg" alt="Photo de profil">
                     </div>
-                  
+                    <div class="project-info">
+                        <h3><i class="fas fa-user"></i> Profil</h3>
+                        <p>Étudiant en BTS SIO option SLAM, passionné par le développement web et mobile.</p>
+                        <div class="info-details">
+                            <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+                            <p><i class="fas fa-graduation-cap"></i> BTS SIO en cours</p>
+                            <p><i class="fas fa-code"></i> Développeur Full Stack Junior</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cv-card">
                     <h3><i class="fas fa-file-alt"></i> Curriculum Vitae</h3>
                     <div class="cv-container">
                         <iframe src="img/cv falilou.pdf" width="100%" height="500" class="cv-iframe"></iframe>
@@ -64,51 +67,50 @@
                     <a href="img/cv falilou.pdf" target="_blank" class="download-cv">Télécharger CV</a>
                 </div>
             </div>
-<!-- Carte Parcours -->
-<div class="project-image-card">
-    <div class="project-info">
-        <h3><i class="fas fa-road"></i> Parcours</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h4>2023-2025 Efrei</h4>
-                <p>BTS SIO option SLAM</p>
-            </div>
-            <div class="timeline-item">
-                <h4>2022-2023 Paris 1 Panthéon Sorbonne</h4>
-                <p>L1 économie</p>
-            </div>
-            <div class="timeline-item">
-                <h4>2022</h4>
-                <p>Baccalauréat</p>
-            </div>
-        </div>
-    </div>
-    <div class="project-info">
-        <h3><i class="fas fa-road"></i> Expérience professionnelle</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h4>Septembre 2024 - Technicien support Applicatif chez Septeo Legal Suite</h4>
-                <p>• Fourniture d'un support technique et fonctionnel de niveau 1 et 2 sur des applications logicielles métiers (juridique, immobilier, etc.)</p>
-                <p>• Diagnostic et résolution des incidents via un outil de ticketing et interactions directes avec les utilisateurs</p>
-                <p>• Déploiement des applications clientes</p>
-                <p>• Exécution de requêtes SQL pour analyser et corriger des données dans les bases clients</p>
-                <p>• Exploration du code source en Java pour identifier les causes des anomalies applicatives</p>
-            </div>
-        </div>
-    </div>
-</div>
 
-
-            <!-- Carte Certifications -->
+            <!-- Carte Parcours -->
             <div class="project-image-card">
+                <div class="project-info">
+                    <h3><i class="fas fa-road"></i> Parcours</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>2023-2025 Efrei</h4>
+                            <p>BTS SIO option SLAM</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2022-2023 Paris 1 Panthéon Sorbonne</h4>
+                            <p>L1 économie</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2022</h4>
+                            <p>Baccalauréat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3><i class="fas fa-road"></i> Expérience professionnelle</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Septembre 2024 - Technicien support Applicatif chez Septeo Legal Suite</h4>
+                            <p>• Fourniture d'un support technique et fonctionnel de niveau 1 et 2 sur des applications logicielles métiers (juridique, immobilier, etc.)</p>
+                            <p>• Diagnostic et résolution des incidents via un outil de ticketing et interactions directes avec les utilisateurs</p>
+                            <p>• Déploiement des applications clientes</p>
+                            <p>• Exécution de requêtes SQL pour analyser et corriger des données dans les bases clients</p>
+                            <p>• Exploration du code source en Java pour identifier les causes des anomalies applicatives</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Certifications en bas -->
+            <div class="project-image-card certifications-card">
                 <div class="project-info">
                     <h3><i class="fas fa-certificate"></i> Certifications</h3>
                     <div class="certifications-list">
                         <div class="certification-item">
                             <img src="img/ff0a5ec61bc652cce9761f4e68089610662e76fcfea8c84fa813e10d3a9ed3d7_200.webp" alt="Udemy" class="certification-logo">
                             <div class="certification-content">
-                                <h4> Conception de bases de données et langage SQL
-                                </h4>
+                                <h4>Conception de bases de données et langage SQL</h4>
                                 <p>Udemy</p>
                                 <span class="certification-date">2024</span>
                             </div>
@@ -116,7 +118,7 @@
                         <div class="certification-item">
                             <img src="img/ff0a5ec61bc652cce9761f4e68089610662e76fcfea8c84fa813e10d3a9ed3d7_200.webp" alt="Google" class="certification-logo">
                             <div class="certification-content">
-                                <h4> Expert sur SQL server 2022</h4>
+                                <h4>Expert sur SQL server 2022</h4>
                                 <p>Udemy</p>
                                 <span class="certification-date">2024</span>
                             </div>
