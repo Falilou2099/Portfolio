@@ -1727,3 +1727,17 @@ td i.fa-times {
         flex-direction: column;
     }
 }
+
+/* Styles for card grids */
+.cards-grid:not(.about-page) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Specific style for about page to keep its unique layout */
+.cards-grid.about-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
