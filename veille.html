@@ -6,6 +6,123 @@
     <title>Veille Technologique - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Styles spécifiques pour la veille technologique */
+        .tech-watch-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .tech-domain {
+            background: linear-gradient(145deg, var(--dark-secondary), var(--dark-bg));
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tech-domain:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .tech-domain h2 {
+            color: var(--light-accent);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-accent);
+        }
+        
+        .tech-domain h3 {
+            color: var(--text-light);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tech-domain h3 i {
+            margin-right: 0.75rem;
+            color: var(--light-accent);
+        }
+        
+        .tech-domain ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .tech-domain li {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--light-accent);
+        }
+        
+        .tech-domain strong {
+            display: block;
+            color: var(--light-accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .tech-domain p {
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-list {
+            margin-top: 2rem;
+        }
+        
+        .article-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s ease;
+            border-left: 4px solid var(--light-accent);
+        }
+        
+        .article-card:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .article-card h4 {
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        
+        .article-card p {
+            color: var(--text-light);
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .article-card a {
+            display: inline-block;
+            color: var(--light-accent);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--light-accent);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .article-card a:hover {
+            background-color: var(--light-accent);
+            color: var(--dark-bg);
+        }
+        
+        @media (max-width: 768px) {
+            .tech-watch-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -35,140 +152,110 @@
 
     <section class="hero skills-hero">
         <div class="hero-content">
-            <h1>Évolution de l'IA et de la Blockchain (2023-2025)</h1>
-            <p>Analyse de l'évolution de l'IA et de la Blockchain de 2023 à 2025 pour anticiper les innovations et tendances du secteur.</p>
+            <h1>L'Intelligence Artificielle dans les Réseaux Sociaux et l'Édition de Code (2023-2025)</h1>
+            <p>Analyse de l'évolution de l'IA dans deux domaines d'application majeurs : les réseaux sociaux et les environnements de développement intégrés (IDE).</p>
         </div>
     </section>
 
     <section class="section tech-watch">
         <h2>Veille Technologique</h2>
-        <div class="cards-grid">
-            <!-- Intelligence Artificielle Card -->
-            <div class="project-image-card tech-watch-card">
-                <div class="project-image">
-                    <img src="img/IA-technologie.png" alt="Intelligence Artificielle">
-                </div>
-                <div class="project-info additional-content">
-                    <h2>Évolution de l'Intelligence Artificielle</h2>
-                    <h3>Progrès en Deep Learning et Traitement du Langage Naturel (NLP)</h3>
-                    <ul>
-                        <li>
-                            <strong>Avancées Technologiques</strong>
-                            <p>Les modèles de deep learning ont atteint de nouveaux sommets, permettant des applications plus sophistiquées dans divers domaines.</p>
-                        </li>
-                        <li>
-                            <strong>Interactions Humain-Machine</strong>
-                            <p>Les avancées en NLP ont conduit à des IA capables de comprendre et de générer du langage naturel avec une précision inégalée.</p>
-                        </li>
-                    </ul>
+        <div class="tech-watch-container">
+            <!-- IA dans les Réseaux Sociaux -->
+            <div class="tech-domain">
+                <h2><i class="fas fa-share-alt"></i> L'IA dans les Réseaux Sociaux</h2>
+                
+                <h3><i class="fas fa-robot"></i> Assistants IA et Chatbots Avancés</h3>
+                <ul>
+                    <li>
+                        <strong>Grok par xAI (Twitter/X)</strong>
+                        <p>Lancé par xAI, l'entreprise d'Elon Musk, Grok est un assistant IA intégré à Twitter/X qui se distingue par sa capacité à répondre avec humour et à traiter des questions controversées que d'autres IA évitent. Il a accès en temps réel aux données de la plateforme.</p>
+                    </li>
+                    <li>
+                        <strong>Meta AI</strong>
+                        <p>Déployé sur Facebook, Instagram et WhatsApp, Meta AI est un assistant conversationnel qui peut générer des images, répondre à des questions et interagir naturellement avec les utilisateurs dans leurs conversations quotidiennes.</p>
+                    </li>
+                </ul>
 
-                    <h3>IA Générative et Contenu en Ligne</h3>
-                    <ul>
-                        <li>
-                            <strong>Révolution de la Création de Contenu</strong>
-                            <p>Les IA génératives comme ChatGPT et Gemini ont révolutionné la création de contenu, avec des capacités étendues à la rédaction de rapports détaillés.</p>
-                        </li>
-                        <li>
-                            <strong>Perspectives Futures</strong>
-                            <p>D'ici 2025, une grande partie du contenu en ligne devrait être générée par des IA, soulevant des questions sur l'authenticité des informations.</p>
-                        </li>
-                    </ul>
-                </div>
+                <h3><i class="fas fa-shield-alt"></i> Modération de Contenu et Personnalisation</h3>
+                <ul>
+                    <li>
+                        <strong>Détection de Désinformation</strong>
+                        <p>Les plateformes comme TikTok et YouTube utilisent des algorithmes d'IA avancés pour identifier et limiter la propagation de fausses informations, tout en préservant la liberté d'expression.</p>
+                    </li>
+                    <li>
+                        <strong>Recommandations Personnalisées</strong>
+                        <p>LinkedIn et Pinterest exploitent l'IA pour analyser les préférences des utilisateurs et leur proposer du contenu pertinent, augmentant ainsi l'engagement et la satisfaction des utilisateurs.</p>
+                    </li>
+                </ul>
 
-                <div class="project-info">
-                    <h3>Articles Récents sur l'IA</h3>
-                    <div class="tech-articles">
-                        <div class="article-item">
-                            <div class="article-header">
-                                <img src="img/lemonde-logo.png" alt="Le Monde Logo" class="article-icon">
-                                <h4>Les évolutions de l'IA : entre fantasmes et réalités</h4>
-                            </div>
-                            <p>Un article du Monde qui analyse comment l'IA est perçue par le grand public et les chercheurs, entre enthousiasme et inquiétudes.</p>
-                            <a href="https://www.lemonde.fr/idees/article/2024/09/29/aussi-rejouissantes-qu-angoissantes-les-evolutions-de-l-intelligence-artificielle-sont-plus-fantasmees-que-questionnees_6338309_3232.html" target="_blank">Lire l'article</a>
-                        </div>
-                        
-                        <div class="article-item">
-                            <div class="article-header">
-                                <img src="img/lebigdata-logo.png" alt="LeBigData Logo" class="article-icon">
-                                <h4>À quoi s'attendre pour l'IA en 2025 ?</h4>
-                            </div>
-                            <p>LeBigData.fr propose une analyse des tendances de l'IA : régulation, avancées techniques, intégration dans les entreprises.</p>
-                            <a href="https://www.lebigdata.fr/evolution-de-ia-a-quoi-sattendre-pour-2025" target="_blank">Lire l'article</a>
-                        </div>
-                        
-                        <div class="article-item">
-                            <div class="article-header">
-                                <img src="img/leptidigital-logo.png" alt="Leptidigital Logo" class="article-icon">
-                                <h4>15 tendances clés de l'IA à suivre en 2025</h4>
-                            </div>
-                            <p>Leptidigital présente les évolutions marquantes à venir, comme les IA spécialisées ou l'IA générative.</p>
-                            <a href="https://www.leptidigital.fr/intelligence-artificielle-ia/tendances-intelligence-artificielle-ia-50852/" target="_blank">Lire l'article</a>
-                        </div>
+                <h3><i class="fas fa-newspaper"></i> Articles Récents</h3>
+                <div class="article-list">
+                    <div class="article-card">
+                        <h4>"Grok est-ce que c'est vrai?" : l'IA d'Elon Musk face à la désinformation</h4>
+                        <p>BFMTV analyse comment Grok, l'IA d'Elon Musk intégrée à Twitter/X, est devenue un outil plébiscité par les internautes pour vérifier toutes sortes d'informations.</p>
+                        <a href="https://www.bfmtv.com/tech/intelligence-artificielle/grok-est-ce-que-c-est-vrai-et-si-l-ia-d-elon-musk-etait-un-bon-outil-contre-la-desinformation_AV-202505250017.html" target="_blank">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    
+                    <div class="article-card">
+                        <h4>Elon Musk aurait encore cassé Grok, l'IA de Twitter</h4>
+                        <p>Frandroid analyse les problèmes récurrents de Grok, l'assistant IA de Twitter/X, et comment ces dysfonctionnements affectent l'expérience utilisateur sur la plateforme.</p>
+                        <a href="https://www.frandroid.com/culture-tech/intelligence-artificielle/2616595_elon-musk-aurait-encore-casse-grok-lia-de-twitter" target="_blank">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    
+                    <div class="article-card">
+                        <h4>L'IA de Meta arrive dans Facebook, Instagram, WhatsApp, Messenger</h4>
+                        <p>Le Journal du Net explique comment utiliser Meta AI, l'assistant conversationnel désormais disponible sur les principales plateformes de Meta dans 41 pays.</p>
+                        <a href="https://www.journaldunet.com/intelligence-artificielle/1540273-l-ia-de-meta-arrive-dans-facebook-instagram-whatsapp-messenger-voici-comment-s-en-servir/" target="_blank">Lire l'article <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
 
-            <!-- Blockchain Card -->
-            <div class="project-image-card tech-watch-card">
-                <div class="project-image">
-                    <img src="img/BlockchainDetail-scaled.jpg" alt="Blockchain">
-                </div>
-                <div class="project-info additional-content">
-                    <h2>Évolution de la Blockchain</h2>
-                    <h3>Adoption Institutionnelle et Réglementation</h3>
-                    <ul>
-                        <li>
-                            <strong>Intégration Financière</strong>
-                            <p>Les institutions financières ont adopté des solutions blockchain, avec des initiatives innovantes dans le trading et les services financiers.</p>
-                        </li>
-                        <li>
-                            <strong>Cadre Réglementaire</strong>
-                            <p>Les régulateurs mondiaux ont travaillé à clarifier les lois entourant les crypto-monnaies, favorisant une adoption plus large.</p>
-                        </li>
-                    </ul>
+            <!-- IA dans l'Édition de Code -->
+            <div class="tech-domain">
+                <h2><i class="fas fa-code"></i> L'IA dans l'Édition de Code</h2>
+                
+                <h3><i class="fas fa-terminal"></i> Assistants de Codage Intelligents</h3>
+                <ul>
+                    <li>
+                        <strong>Windsurf</strong>
+                        <p>Développé par Windsurf AI, cet assistant de codage utilise un modèle de langage avancé pour comprendre le contexte global d'un projet. Il peut générer des fonctionnalités complètes, déboguer du code complexe et proposer des améliorations architecturales.</p>
+                    </li>
+                    <li>
+                        <strong>Cursor</strong>
+                        <p>Basé sur les modèles GPT-4, Cursor est un IDE qui combine l'édition de code traditionnelle avec des capacités d'IA conversationnelle. Il permet aux développeurs d'expliquer leurs intentions en langage naturel et génère ou modifie le code en conséquence.</p>
+                    </li>
+                </ul>
 
-                    <h3>Impact sur le Monde Professionnel</h3>
-                    <ul>
-                        <li>
-                            <strong>Transformation des Métiers</strong>
-                            <p>L'IA et la blockchain transforment les métiers, nécessitant de nouvelles compétences et une adaptation continue.</p>
-                        </li>
-                        <li>
-                            <strong>Innovation et Compétitivité</strong>
-                            <p>Les entreprises adoptant ces technologies peuvent innover plus rapidement et améliorer leur efficacité.</p>
-                        </li>
-                    </ul>
-                </div>
+                <h3><i class="fas fa-laptop-code"></i> Environnements de Développement Nouvelle Génération</h3>
+                <ul>
+                    <li>
+                        <strong>Bolt.new</strong>
+                        <p>Cette plateforme cloud combine un IDE avec des capacités d'IA générative, permettant de créer des applications web complètes à partir de simples descriptions. Elle gère automatiquement le déploiement et l'infrastructure.</p>
+                    </li>
+                    <li>
+                        <strong>V0 par Replit</strong>
+                        <p>V0 est un environnement de développement qui utilise l'IA pour transformer des instructions en langage naturel en applications fonctionnelles. Il peut comprendre des maquettes visuelles et générer le code correspondant.</p>
+                    </li>
+                </ul>
 
-                <div class="project-info">
-                    <h3>Articles Récents sur la Blockchain</h3>
-                    <div class="tech-articles">
-                        <div class="article-item">
-                            <div class="article-header">
-                                <img src="img/cryptoast-logo.png" alt="Cryptoast Logo" class="article-icon">
-                                <h4>Les 7 tendances crypto à suivre en 2025</h4>
-                            </div>
-                            <p>Cryptoast aborde les transformations à venir dans la blockchain : DeFi, tokenisation, adoption institutionnelle.</p>
-                            <a href="https://cryptoast.fr/7-tendances-crypto-suivre-absolument-2025/" target="_blank">Lire l'article</a>
-                        </div>
-                        
-                        <div class="article-item">
-                            <div class="article-header">
-                                <img src="img/blockchainfrance-logo.png" alt="Blockchain France Logo" class="article-icon">
-                                <h4>Les dernières avancées de la blockchain en 2025</h4>
-                            </div>
-                            <p>Blockchain France explore comment la blockchain transforme des secteurs comme la santé, la logistique ou l'immobilier.</p>
-                            <a href="https://blockchainfrance.net/les-dernieres-avancees-de-la-blockchain-dans-divers-secteurs-en-2025/" target="_blank">Lire l'article</a>
-                        </div>
-                        
-                        <div class="article-item">
-                            <div class="article-header">
-                                <img src="img/ultima-business-logo.png" alt="Ultima Business Logo" class="article-icon">
-                                <h4>Tendances blockchain 2025 : que nous réserve l'avenir ?</h4>
-                            </div>
-                            <p>Ultima Business évoque notamment le développement du Blockchain-as-a-Service (BaaS) et l'utilisation de contrats intelligents.</p>
-                            <a href="https://blog.ultima-business.com/fr/tendances-blockchain-a-quoi-sattendre-en-2025/" target="_blank">Lire l'article</a>
-                        </div>
+                <h3><i class="fas fa-newspaper"></i> Articles Récents</h3>
+                <div class="article-list">
+                    <div class="article-card">
+                        <h4>Cursor vs Windsurf: Qui est le meilleur IDE IA pour le codage?</h4>
+                        <p>Hugging Face compare en détail Cursor et Windsurf, deux environnements de développement intégrés propulsés par l'IA qui révolutionnent la façon dont les développeurs écrivent du code.</p>
+                        <a href="https://huggingface.co/blog/lynn-mikami/cursor-vs-windsurf" target="_blank">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    
+                    <div class="article-card">
+                        <h4>Windsurf vs Cursor: Quel outil de codage IA est meilleur pour votre projet?</h4>
+                        <p>Tech Startups compare les forces et faiblesses de Windsurf et Cursor, expliquant pourquoi Cursor offre plus de contrôle tandis que Windsurf permet de démarrer plus rapidement.</p>
+                        <a href="https://techstartups.com/2025/05/19/windsurf-vs-cursor-which-ai-coding-tool-is-better-for-your-project-and-why/" target="_blank">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    
+                    <div class="article-card">
+                        <h4>Analyse comparative de Replit, v0.dev et Bolt.new pour le codage assisté par IA</h4>
+                        <p>Medium propose une analyse détaillée des trois plateformes de génération de code par IA, comparant leurs fonctionnalités, leurs forces et leurs limites pour différents types de projets.</p>
+                        <a href="https://medium.com/@sauravhunny/ai-powered-coding-a-comparative-analysis-of-replit-v0-dev-and-bolt-new-603e7074675e" target="_blank">Lire l'article <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
