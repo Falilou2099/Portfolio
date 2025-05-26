@@ -30,6 +30,91 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
+// Gestion du menu mobile
+const menuToggle = document.querySelector('.mobile-menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const body = document.body;
+
+// Création de l'overlay pour le menu mobile
+const overlay = document.createElement('div');
+overlay.classList.add('menu-overlay');
+document.body.appendChild(overlay);
+
+// Fonction pour ouvrir/fermer le menu mobile
+function toggleMobileMenu() {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    overlay.classList.toggle('active');
+    body.classList.toggle('menu-open');
+}
+
+// Événement pour le bouton hamburger
+menuToggle.addEventListener('click', toggleMobileMenu);
+
+// Fermer le menu quand on clique sur l'overlay
+overlay.addEventListener('click', toggleMobileMenu);
+
+// Fermer le menu quand on clique sur un lien (sauf les dropdowns)
+document.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(link => {
+    link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active') && window.innerWidth <= 768) {
+            toggleMobileMenu();
+        }
+    });
+});
+
+// Gestion des sous-menus
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+        // Sur mobile uniquement, empêcher la navigation et gérer les dropdowns
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const parent = this.parentElement;
+            const dropdownMenu = parent.querySelector('.dropdown-menu');
+            
+            // Fermer tous les autres sous-menus
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                if (menu !== dropdownMenu && menu.style.display === 'block') {
+                    menu.style.display = 'none';
+                    menu.parentElement.querySelector('.dropdown-toggle i').style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Ouvrir/fermer le sous-menu actuel
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+                this.querySelector('i').style.transform = 'rotate(0deg)';
+            } else {
+                dropdownMenu.style.display = 'block';
+                this.querySelector('i').style.transform = 'rotate(180deg)';
+            }
+        }
+    });
+});
+
+// Réinitialiser les styles des dropdowns lors du redimensionnement
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        // Réinitialiser les styles des dropdowns en mode desktop
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            menu.style.display = '';
+        });
+        document.querySelectorAll('.dropdown-toggle i').forEach(icon => {
+            icon.style.transform = '';
+        });
+        
+        // Réinitialiser le menu mobile s'il est ouvert
+        if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+            overlay.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
+    }
+});
+
 // Gestion du formulaire de contact
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
