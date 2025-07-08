@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio BTS SIO</title>
+    <title>Portfolio BTS SIO | Falilou Toure</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Barre de chargement futuriste -->
+    <div class="loading-bar"></div>
+    
+    <!-- Conteneur de particules -->
+    <div class="particles-container"></div>
+    
     <!-- Navigation -->
     <nav>
         <div class="nav-content">
@@ -34,6 +42,7 @@
 
     <!-- Section Hero -->
     <section class="hero skills-hero">
+        <div class="grid-background"></div>
         <div class="hero-content">
             <h1>Bienvenue sur mon Portfolio</h1>
             <h2>Falilou Toure</h2>
@@ -42,6 +51,8 @@
                 <a href="projects.html" class="cta-button">Voir mes projets</a>
                 <a href="contact.html" class="cta-button secondary">Me contacter</a>
             </div>
+            <!-- Conteneur pour les composants React -->
+            <div id="react-components"></div>
         </div>
     </section>
 
@@ -60,7 +71,7 @@
             <div class="glow-card">
                 <i class="fas fa-bullseye"></i>
                 <h3>Objectifs</h3>
-                <p>Devenir DBA (Administrateur de Bases de Données) et gérer des infrastructures de données complexes pour optimiser les performances et la sécurité des systèmes.</p>
+                <p>Devenir Ingénieur Cloud et concevoir, déployer et gérer des infrastructures cloud sécurisées et évolutives, en optimisant les performances des systèmes et en garantissant leur fiabilité.</p>
                 
             </div>
 
@@ -229,5 +240,14 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/modern.js"></script>
+    <script src="js/effects3d.js"></script>
+    
+    <!-- Scripts React -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </body>
 </html>
