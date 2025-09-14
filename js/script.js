@@ -75,21 +75,14 @@ dropdownToggles.forEach(toggle => {
             const dropdownMenu = parent.querySelector('.dropdown-menu');
             
             // Fermer tous les autres sous-menus
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                if (menu !== dropdownMenu && menu.style.display === 'block') {
-                    menu.style.display = 'none';
-                    menu.parentElement.querySelector('.dropdown-toggle i').style.transform = 'rotate(0deg)';
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                if (dropdown !== parent && dropdown.classList.contains('active')) {
+                    dropdown.classList.remove('active');
                 }
             });
             
             // Ouvrir/fermer le sous-menu actuel
-            if (dropdownMenu.style.display === 'block') {
-                dropdownMenu.style.display = 'none';
-                this.querySelector('i').style.transform = 'rotate(0deg)';
-            } else {
-                dropdownMenu.style.display = 'block';
-                this.querySelector('i').style.transform = 'rotate(180deg)';
-            }
+            parent.classList.toggle('active');
         }
     });
 });

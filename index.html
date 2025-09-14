@@ -22,17 +22,21 @@
             <div class="logo">
                 <a href="index.html">Falilou Toure</a>
             </div>
+            <button class="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
                 <li><a href="projects.html">Projets</a></li>
                 <li class="dropdown">
-                    <a href="bts-sio.html" class="dropdown-toggle">BTS SIO</a>
+                    <a href="formation.html" class="dropdown-toggle">Formation</a>
                     <ul class="dropdown-menu">
-                        <li><a href="bts-sio.html">Présentation</a></li>
-                        <li><a href="bts-sio-e5.html">Tableau E5</a></li>
-                        <li><a href="veille.html">Veille Technologique</a></li>
+                        <li><a href="bts-sio-complet.html">BTS SIO SLAM</a></li>
+                        <li><a href="bachelor.html">Bachelor Ingénierie & Numérique</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
@@ -44,9 +48,9 @@
     <section class="hero skills-hero">
         <div class="grid-background"></div>
         <div class="hero-content">
-            <h1>Bienvenue sur mon Portfolio</h1>
-            <h2>Falilou Toure</h2>
-            <p>Étudiant en Bachelor Ingenierie & Numerique - Développeur </p>
+            <h1>Falilou Toure</h1>
+            <h2>Développeur </h2>
+            <p>Passionné par les technologies numériques et l'innovation</p>
             <div class="hero-buttons">
                 <a href="projects.html" class="cta-button">Voir mes projets</a>
                 <a href="contact.html" class="cta-button secondary">Me contacter</a>
@@ -56,113 +60,227 @@
         </div>
     </section>
 
-    <!-- Section Présentation -->
-    <section class="section">
-        <h2>Qui suis-je ?</h2>
-        <div class="cards-grid">
-            <!-- Carte de présentation -->
-            <div class="glow-card">
-                <i class="fas fa-user-graduate"></i>
-                <h3>Formation</h3>
-                <p>Étudiant en Bachelor Ingenierie & Numerique, passionné par le développement web et les nouvelles technologies.</p>
-            </div>
-
-            <!-- Carte objectifs -->
-            <div class="glow-card">
-                <i class="fas fa-bullseye"></i>
-                <h3>Objectifs</h3>
-                <p>Devenir Ingénieur Cloud et concevoir, déployer et gérer des infrastructures cloud sécurisées et évolutives, en optimisant les performances des systèmes et en garantissant leur fiabilité.</p>
+    <!-- Section À propos -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-cards-grid">
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Qui suis-je ?</h3>
+                        <p>Étudiant passionné en <strong>Bachelor Ingénierie & Numérique</strong> basé à Paris. Spécialisé en développement Full Stack avec une expertise en technologies web modernes.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Mes spécialités</h3>
+                        <p>Création d'<strong>applications web responsives</strong>, gestion de bases de données, et intégration de solutions logicielles innovantes avec un focus sur la cybersécurité.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Mon objectif</h3>
+                        <p>Devenir <strong>Data Engineer Cloud</strong> pour concevoir des infrastructures cloud sécurisées et optimiser les systèmes de données à grande échelle.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Actuellement</h3>
+                        <p>Développement de projets concrets alliant front-end et back-end, exploration des <strong>technologies cloud</strong> et solutions big data.</p>
+                    </div>
+                </div>
                 
-            </div>
+                <div class="cv-section">
+                    <div class="cv-container">
+                        <h3><i class="fas fa-file-alt"></i> Curriculum Vitae</h3>
+                        <object>
+                            <p>cliquez sur le bouton ci-dessous pour télécharger mon CV et en savoir plus sur moi </a>.</p>
+                        </object>
+                        <a href="img/CV Falilou Toure.pdf" target="_blank" class="download-cv">
+                            <i class="fas fa-download"></i>
+                            Télécharger CV
+                        </a>
+                    </div>
 
-            <!-- Carte passions -->
-            <div class="glow-card">
-                <i class="fas fa-heart"></i>
-                <h3>Passions</h3>
-                <p>Développement web, nouvelles technologies, cybersécurité.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Section Compétences -->
-    <section class="section">
-        <h2>Mes Compétences</h2>
-        <div class="cards-grid">
-            <!-- Front-end -->
-            <div class="dynamic-card">
-                <div class="skill-card-header">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Front-end</h3>
-                </div>
-                <div class="skill-card-content">
-                    <ul>
-                        <li> HTML5/CSS3</li>
-                        <li> JavaScript</li>
-                        <li> React</li>
-                        <li> Bootstrap</li>
-                    </ul>
-                </div>
-            </div>
+    <section class="section skills-section" id="competences">
+        <div class="container">
+            <h2>Mes Compétences</h2>
+            <div class="skills-container">
+                <div class="skills-categories">
+                    <!-- Développement Web -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="category-title">Développement Web</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="html">
+                                <i class="fab fa-html5 skill-icon"></i>
+                                <span class="skill-name">HTML5</span>
+                            </div>
+                            <div class="skill-item" data-skill="css">
+                                <i class="fab fa-css3-alt skill-icon"></i>
+                                <span class="skill-name">CSS3</span>
+                            </div>
+                            <div class="skill-item" data-skill="javascript">
+                                <i class="fab fa-js-square skill-icon"></i>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            <div class="skill-item" data-skill="react">
+                                <i class="fab fa-react skill-icon"></i>
+                                <span class="skill-name">React</span>
+                            </div>
+                            <div class="skill-item" data-skill="tailwind">
+                                <i class="fas fa-wind skill-icon"></i>
+                                <span class="skill-name">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Back-end -->
-            <div class="dynamic-card">
-                <div class="skill-card-header">
-                    <i class="fas fa-server"></i>
-                    <h3>Back-end</h3>
-                </div>
-                <div class="skill-card-content">
-                    <ul>
-                        <li> PHP</li>
-                        <li> MySQL</li>
-                        <li> Node.js</li>
-                    </ul>
-                </div>
-            </div>
+                    <!-- Développement Backend -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3 class="category-title">Backend & Bases de Données</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="php">
+                                <i class="fab fa-php skill-icon"></i>
+                                <span class="skill-name">PHP</span>
+                            </div>
+                            <div class="skill-item" data-skill="nodejs">
+                                <i class="fab fa-node-js skill-icon"></i>
+                                <span class="skill-name">Node.js</span>
+                            </div>
+                            <div class="skill-item" data-skill="mysql">
+                                <i class="fas fa-database skill-icon"></i>
+                                <span class="skill-name">MySQL</span>
+                            </div>
+                            <div class="skill-item" data-skill="postgresql">
+                                <i class="fas fa-database skill-icon"></i>
+                                <span class="skill-name">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Outils -->
+                    <!-- Langages de Programmation -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3 class="category-title">Langages de Programmation</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="java">
+                                <i class="fab fa-java skill-icon"></i>
+                                <span class="skill-name">Java</span>
+                            </div>
+                            <div class="skill-item" data-skill="python">
+                                <i class="fab fa-python skill-icon"></i>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-item" data-skill="csharp">
+                                <i class="fas fa-hashtag skill-icon"></i>
+                                <span class="skill-name">C#</span>
+                            </div>
+                        </div>
+                    </div>
 
-
-            <!-- Soft Skills -->
-            <div class="dynamic-card">
-                <div class="skill-card-header">
-                    <i class="fas fa-users"></i>
-                    <h3>Soft Skills</h3>
-                </div>
-                <div class="skill-card-content">
-                    <ul>
-                        <li> Travail d'équipe</li>
-                        <li> Communication</li>
-                        <li> Gestion de projet</li>
-                        <li> Autonomie</li>
-                    </ul>
+                    <!-- Outils & Plateformes -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3 class="category-title">Outils & Plateformes</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="git">
+                                <i class="fab fa-git-alt skill-icon"></i>
+                                <span class="skill-name">Git</span>
+                            </div>
+                            <div class="skill-item" data-skill="docker">
+                                <i class="fab fa-docker skill-icon"></i>
+                                <span class="skill-name">Docker</span>
+                            </div>
+                            <div class="skill-item" data-skill="linux">
+                                <i class="fab fa-linux skill-icon"></i>
+                                <span class="skill-name">Linux</span>
+                            </div>
+                            <div class="skill-item" data-skill="aws">
+                                <i class="fab fa-aws skill-icon"></i>
+                                <span class="skill-name">AWS</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Services -->
+    <!-- Section Parcours -->
     <section class="section">
-        <h2>Mes Services</h2>
-        <div class="cards-grid">
-            <div class="floating-icon-card">
-                <i class="fas fa-code"></i>
-                <h3>Développement Web</h3>
-                <p>Création de sites web responsives et applications web modernes</p>
-            </div>
-
-            <div class="floating-icon-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Applications Mobiles</h3>
-                <p>Développement d'applications mobiles cross-platform</p>
-            </div>
-
-            <div class="floating-icon-card">
-                <i class="fas fa-database"></i>
-                <h3>Bases de données</h3>
-                <p>Conception et gestion de bases de données</p>
+        <div class="container">
+            <h2>Mon Parcours</h2>
+            <div class="journey-timeline">
+                <div class="timeline-progress"></div>
+                <div class="timeline-steps">
+                    <div class="timeline-step completed">
+                        <div class="step-marker"></div>
+                        <div class="step-content">
+                            <h4>BTS SIO SLAM</h4>
+                            <p>2022-2024<br>Services Informatiques aux Organisations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step current">
+                        <div class="step-marker"></div>
+                        <div class="step-content">
+                            <h4>Bachelor Ingénierie & Numérique</h4>
+                            <p>2024-2027<br>Développement et Architecture</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step future">
+                        <div class="step-marker"></div>
+                        <div class="step-content">
+                            <h4>Spécialisation Cloud</h4>
+                            <p>2027-2028<br>Master Data Engineering</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step future">
+                        <div class="step-marker"></div>
+                        <div class="step-content">
+                            <h4>Data Engineer Cloud</h4>
+                            <p>2028+<br>Objectif professionnel</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
 
     <!-- Section Derniers Projets -->
     <section class="section">

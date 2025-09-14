@@ -11,20 +11,20 @@
     --border-color: #3a3a3a;     /* Couleur des bordures */
     --hover-accent: #cccccc;     /* Effet hover */
     
-    /* Nouvelles couleurs vertes pour modernité */
-    --neon-green: #39ff14;       /* Vert néon vif pour les accents */
-    --green-glow: rgba(57, 255, 20, 0.5); /* Lueur verte pour les effets */
-    --green-dark: #0d7377;       /* Vert foncé pour les éléments secondaires */
-    --green-light: #32e0c4;      /* Vert clair pour les éléments interactifs */
-    --green-gradient: linear-gradient(135deg, var(--green-dark), var(--neon-green)); /* Dégradé vert */
+    /* Nouvelles couleurs violettes pour modernité */
+    --neon-purple: #9b59b6;      /* Violet néon vif pour les accents */
+    --purple-glow: rgba(155, 89, 182, 0.5); /* Lueur violette pour les effets */
+    --purple-dark: #8e44ad;      /* Violet foncé pour les éléments secondaires */
+    --purple-light: #b19cd9;     /* Violet clair pour les éléments interactifs */
+    --purple-gradient: linear-gradient(135deg, var(--purple-dark), var(--neon-purple)); /* Dégradé violet */
 }
 
 /* Effets futuristes globaux */
 body {
     background-color: var(--dark-bg);
     background-image: 
-        radial-gradient(circle at 25% 25%, rgba(57, 255, 20, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 75% 75%, rgba(57, 255, 20, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 25% 25%, rgba(155, 89, 182, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(155, 89, 182, 0.03) 0%, transparent 50%);
     position: relative;
     overflow-x: hidden;
 }
@@ -37,8 +37,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 3px;
-    background: var(--neon-green);
-    box-shadow: 0 0 15px var(--green-glow);
+    background: var(--neon-purple);
+    box-shadow: 0 0 15px var(--purple-glow);
     z-index: 9999;
 }
 
@@ -46,7 +46,7 @@ body::before {
 nav {
     background-color: rgba(26, 26, 26, 0.8) !important;
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(57, 255, 20, 0.2);
+    border-bottom: 1px solid rgba(155, 89, 182, 0.2);
 }
 
 .nav-content {
@@ -60,7 +60,7 @@ nav {
     left: 0;
     width: 100%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+    background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
 }
 
 .logo a {
@@ -76,7 +76,7 @@ nav {
     left: 0;
     width: 100%;
     height: 1px;
-    background: var(--neon-green);
+    background: var(--neon-purple);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease;
@@ -101,7 +101,7 @@ nav {
     left: 0;
     width: 100%;
     height: 2px;
-    background: var(--neon-green);
+    background: var(--neon-purple);
     transform: translateX(-100%);
     transition: transform 0.3s ease;
 }
@@ -138,7 +138,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--green-gradient);
+    background: var(--purple-gradient);
     z-index: -1;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -147,7 +147,7 @@ nav {
 .cta-button:hover {
     color: var(--dark-bg);
     transform: translateY(-3px);
-    box-shadow: 0 7px 15px rgba(57, 255, 20, 0.4);
+    box-shadow: 0 7px 15px rgba(155, 89, 182, 0.4);
 }
 
 .cta-button:hover::before {
@@ -157,7 +157,7 @@ nav {
 /* Cartes avec effet néon */
 .glow-card, .dynamic-card, .project-card, .stage-item {
     position: relative;
-    border: 1px solid rgba(57, 255, 20, 0.2);
+    border: 1px solid rgba(155, 89, 182, 0.2);
     background: var(--dark-secondary);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
@@ -171,14 +171,14 @@ nav {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(57, 255, 20, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(155, 89, 182, 0.2), transparent);
     transition: left 0.7s ease;
 }
 
 .glow-card:hover, .dynamic-card:hover, .project-card:hover, .stage-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(57, 255, 20, 0.3);
-    border-color: var(--neon-green);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(155, 89, 182, 0.3);
+    border-color: var(--neon-purple);
 }
 
 .glow-card:hover::before, .dynamic-card:hover::before, .project-card:hover::before, .stage-item:hover::before {
@@ -186,20 +186,20 @@ nav {
 }
 
 .glow-card i, .dynamic-card i {
-    color: var(--neon-green);
-    text-shadow: 0 0 10px rgba(57, 255, 20, 0.7);
+    color: var(--neon-purple);
+    text-shadow: 0 0 10px rgba(155, 89, 182, 0.7);
 }
 
 /* Barres de progression modernisées */
 .progress-bar {
-    background-color: rgba(57, 255, 20, 0.1);
-    border: 1px solid rgba(57, 255, 20, 0.3);
+    background-color: rgba(155, 89, 182, 0.1);
+    border: 1px solid rgba(155, 89, 182, 0.3);
     overflow: hidden;
 }
 
 .progress {
-    background: var(--green-gradient);
-    box-shadow: 0 0 10px var(--green-glow);
+    background: var(--purple-gradient);
+    box-shadow: 0 0 10px var(--purple-glow);
     position: relative;
 }
 
@@ -223,9 +223,9 @@ nav {
 /* Tags de projet modernisés */
 .project-tags span {
     background: var(--dark-bg);
-    color: var(--neon-green);
-    border: 1px solid rgba(57, 255, 20, 0.3);
-    box-shadow: 0 0 5px rgba(57, 255, 20, 0.2);
+    color: var(--neon-purple);
+    border: 1px solid rgba(155, 89, 182, 0.3);
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.2);
 }
 
 /* Section Hero modernisée */
@@ -266,8 +266,8 @@ nav {
     transform: translateX(-50%);
     width: 50%;
     height: 2px;
-    background: var(--neon-green);
-    box-shadow: 0 0 10px var(--green-glow);
+    background: var(--neon-purple);
+    box-shadow: 0 0 10px var(--purple-glow);
 }
 
 .hero h2 {
@@ -277,17 +277,17 @@ nav {
 /* Formulaire de contact modernisé */
 .form-group input, .form-group textarea {
     background-color: var(--dark-bg);
-    border: 1px solid rgba(57, 255, 20, 0.2);
+    border: 1px solid rgba(155, 89, 182, 0.2);
     transition: all 0.3s ease;
 }
 
 .form-group input:focus, .form-group textarea:focus {
-    border-color: var(--neon-green);
-    box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.3);
 }
 
 .form-group label {
-    color: var(--neon-green);
+    color: var(--neon-purple);
 }
 
 /* Animations de particules pour l'arrière-plan */
@@ -342,8 +342,8 @@ nav {
 .code-line {
     position: relative;
     padding: 15px;
-    background-color: rgba(57, 255, 20, 0.05);
-    border-left: 3px solid var(--neon-green);
+    background-color: rgba(155, 89, 182, 0.05);
+    border-left: 3px solid var(--neon-purple);
     font-family: 'Courier New', monospace;
     margin: 20px 0;
     overflow-x: auto;
@@ -351,7 +351,7 @@ nav {
 
 .code-line::before {
     content: '> ';
-    color: var(--neon-green);
+    color: var(--neon-purple);
 }
 
 /* Scrollbar personnalisée */
@@ -365,12 +365,12 @@ nav {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--green-dark);
+    background-color: var(--purple-dark);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--neon-green);
+    background: var(--neon-purple);
 }
 
 /* Animation de chargement futuriste */
@@ -392,7 +392,7 @@ nav {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: var(--green-gradient);
+    background: var(--purple-gradient);
     animation: loading 2s infinite ease-in-out;
 }
 
